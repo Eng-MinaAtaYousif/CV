@@ -1,0 +1,194 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    background-color: rgb(238, 238, 238);
+}
+/* main container */
+.container
+{
+    display: grid;
+    grid-template-areas: 
+     'h h h h '
+     'c1 c1 c2 c2'
+    ;
+    height: auto;
+    width: 99%;
+    margin: 30px auto;
+    box-shadow: 10px 10px 30px 10px #000;
+}
+
+/* container div.header */
+.header{
+    width: 100%;
+    height: auto;
+    grid-area: h;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(182, 181, 181);
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.header > .img{
+    width: 100%;
+      
+
+} 
+.header > div img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    float: right;
+    margin-top:10px ;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    
+
+
+}
+.header > .info {
+    width: 50%;
+    height: auto;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+/* container  div .part1 , .part2 */
+
+.part1 ,
+ .part2 
+{
+  height: auto;
+  margin-bottom: 30px;
+
+
+}
+
+/* container first direct div  class part1 */
+.container > .part1 {
+    grid-area: c1;
+    display: block;
+    width: 100%;
+    border-right: 2px solid #000;
+    /* margin-right: 140px; */
+    background-color: rgb(252, 210, 210);
+    border-top-left-radius: 30px;
+}
+
+/* container first direct div  class part2 */
+
+.container > .part2 {
+    grid-area: c2;
+    display: block;
+    width: 80%;
+    margin-left: 10px;
+    word-wrap:break-word;
+    word-break: break-all;
+  
+    
+    
+}
+.container > .part1 > article {
+    margin:10px auto ;   
+     height: auto;
+     width: 98%;    
+     margin-bottom:20px ;
+     word-break: break-all;
+     word-wrap: break-word;
+}
+/* container > .part2 > article (social data) */
+.container > .part2 > article {
+    margin:10px auto ;   
+     height: auto;
+     width: 98%;    
+     margin-bottom:20px ;
+    
+}
+.container > .part2 > article > p {
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+/* all h3 */
+h3{
+    background-color: rgb(156, 146, 146);
+    padding: 10px;
+    transform: skewX(-15deg);
+    margin-right: 10px;
+    color: white;
+}
+
+@media screen and (min-width:600px){
+    .container{
+        width: 100%;
+        margin: 10px auto;
+    }
+}
+
+/* 
+ - media screen for mobile 
+ 
+ */
+@media screen and (max-width:600px) {
+    .container{
+        /* display: block; */
+        display: grid;
+        grid-template-areas: 
+         'h h h h '
+         'c2 c2 c2 c2'
+         'c1 c1 c1 c1'
+        ;
+       
+    }
+    .container div {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    /* header  */
+    .header {
+        display: flex;
+        flex-direction: column-reverse; 
+        
+    } 
+    /* header div > img  */
+    .header > div  {
+        height: auto;   
+        width: 100%;
+        text-align: center;
+    }
+    .header > div  > img {
+        width: 200px ;
+        height: 200px;
+        border-radius: 50%;
+        margin: 30px auto;
+        float: none;
+        
+     
+    }
+    /* header > div .info  */
+    .header > .info {
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+        margin: 0%;
+    }
+   .part1 , .part2 {
+       padding-left: 20px;
+       display: block;
+   }
+   .part1{
+       border-left:2px solid #000 ;
+   }
+   .container > .part2 {
+    grid-area: c2;
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    word-wrap:break-word;
+    word-break: break-all;
+    
+    
+}
+}
