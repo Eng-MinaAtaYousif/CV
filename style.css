@@ -74,8 +74,14 @@ body{
     /* margin-right: 140px; */
     background-color: rgb(252, 210, 210);
     border-top-left-radius: 30px;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 10px;
+  
 }
-
+.container > .part1 > * {
+    margin-right: 70px;
+}
 /* container first direct div  class part2 */
 
 .container > .part2 {
